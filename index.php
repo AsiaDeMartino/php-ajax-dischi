@@ -11,6 +11,7 @@ include __DIR__.'/server.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -18,6 +19,22 @@ include __DIR__.'/server.php';
     <img src="spotify-logo.png" alt="">
 </div>
 <div class="main">
+    <div class="card-wrapper">
+        <?php
+            foreach($dischi as $value){
+        ?>
+        <div class="card">
+            <figure>
+                <img src="<?php echo $value['poster'] ?>" alt="">
+            </figure>
+            <h1><?php echo $value['title'] ?></h1>
+            <span><?php echo $value['author'] ?></span>
+            <span><?php echo $value['year'] ?></span>
+        </div>
+        <?php
+            };
+        ?>    
+    </div>
     
 </div>
 
