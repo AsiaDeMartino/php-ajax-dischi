@@ -1,6 +1,6 @@
 <?php
 
-include __DIR__.'/server.php';
+//include __DIR__.'/server.php';
 // var_dump($dischi)
 
 ?>
@@ -12,6 +12,8 @@ include __DIR__.'/server.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -19,25 +21,25 @@ include __DIR__.'/server.php';
     <img src="spotify-logo.png" alt="">
 </div>
 <div class="main">
-    <div class="card-wrapper">
+    <div class="card-wrapper" id="app">
         <?php
-            foreach($dischi as $value){
+            //foreach($dischi as $value){
         ?>
-        <div class="card">
+        <!-- <div class="card">
             <figure>
-                <img src="<?php echo $value['poster'] ?>" alt="">
+                <img src="<?php //echo $value['poster'] ?>" alt="">
             </figure>
-            <h1><?php echo $value['title'] ?></h1>
-            <span><?php echo $value['author'] ?></span>
-            <span><?php echo $value['year'] ?></span>
-        </div>
+            <h1><?php //echo $value['title'] ?></h1>
+            <span><?php //echo $value['author'] ?></span>
+            <span><?php //echo $value['year'] ?></span>
+        </div> -->
         <?php
-            };
+            //};
         ?>    
     </div>
     
 </div>
-
+<script src="app.js"></script>
 </body>
 
 <style>
