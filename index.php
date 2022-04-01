@@ -22,6 +22,7 @@
 </div>
 <div class="main">
     <div class="card-wrapper" id="app">
+        <!-- Php -->
         <?php
             //foreach($dischi as $value){
         ?>
@@ -35,7 +36,16 @@
         </div> -->
         <?php
             //};
-        ?>    
+        ?>  
+        <!-- Vue -->
+        <div v-for="items in canzoni" class="card">
+            <figure>
+                <img :src="items.poster" alt="">
+            </figure>
+            <h1>{{items.title}}</h1>
+            <span>{{items.author}}</span>
+            <span>{{items.year}}</span>
+        </div>  
     </div>
     
 </div>
