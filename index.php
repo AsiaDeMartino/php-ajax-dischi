@@ -20,8 +20,17 @@
 <div class="header">
     <img src="spotify-logo.png" alt="">
 </div>
-<div class="main">
-    <div class="card-wrapper" id="app">
+<div class="main" id="app">
+    <div class="select">
+        <select @change="fetchData()" v-model="select">
+            <option :value="''">Tutti i generi</option>
+            <option :value="'rock'">Rock</option>
+            <option :value="'pop'">Pop</option>
+            <option :value="'jazz'">Jazz</option>
+            <option :value="'metal'">Metal</option>
+        </select>
+    </div>
+    <div class="card-wrapper">
         <!-- Php -->
         <?php
             //foreach($dischi as $value){
@@ -137,6 +146,16 @@ span{
 .header img{
     height: 45px;
     margin-left: 20px;
+}
+
+select{
+    margin-bottom: 50px;
+    padding: 12px 15px 12px 8px;
+    background-color: rgba(white,0.1);
+    color: black;
+    border: 1px solid white;
+    border-radius: 3px;
+    font-size: 18px;
 }
 </style>
 </html>

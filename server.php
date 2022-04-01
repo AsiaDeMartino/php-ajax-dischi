@@ -1,5 +1,7 @@
 <?php
 
+$select = isset( $_GET['select'] ) ? $_GET['select'] : null;
+
 $dischi = [
             [
                 "poster" => "https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg",
@@ -72,6 +74,15 @@ $dischi = [
                 "year" => "1987"
             ]
 ];
+if ($select) {
+    $selezionati = [];
+   foreach($dischi as $value){
+       if ($select == strtolower($value['genre'])){
+            array_push($selezionati,$value);
+       };
+   };
+   $dischi = $selezionati;
+}
 
 header('Content-Type: application/json');
 echo json_encode($dischi);
